@@ -1,0 +1,43 @@
+@import '../../iconfont.wxss';
+@import '../../template/star.wxss';
+.header{
+  background-color: #42bd56;
+  padding: 20rpx 30rpx;
+}
+.search{
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 0;
+  color: #ccc;
+  font-size: 28rpx;
+}
+.movies-top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.more{
+  color: #42bd56;
+}
+scroll-view{
+  white-space: nowrap;
+}
+.bottom{
+  width: 200rpx;
+	display: inline-block;
+	margin: 0 10rpx;
+	text-align: center;
+}
+.bottom>image{
+  width: 200rpx;
+	height: 284rpx;
+  border-radius: 10rpx;
+}
+.bottom .movies-name{
+  font-size: 28rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

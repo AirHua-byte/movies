@@ -1,0 +1,13 @@
+<template name="stars">
+  <view class="stars">
+    <view wx:if="{{!list.star || list.star == '00'}}">暂无评分</view>
+    <view wx:else>
+      <view class="stars-list" wx:for="{{[1,2,3,4,5]}}" wx:for-item="i" wx:key="index">
+          <image wx:if="{{ list.star / 10 >= index + 1 }}" src="/images/star1.png"/>
+          <image wx:elif="{{ list.star / 10 >= index && list.star % 10 != 0 }}" src="/images/star2.png"/>
+          <image wx:else src="/images/star3.png"/>
+      </view>
+      <text class="rating-score">{{ list.score }}</text>
+    </view>
+  </view>
+</template>

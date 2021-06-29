@@ -1,0 +1,25 @@
+<import src="/template/star.wxml"></import>
+<view class="header">
+  <view class="search">
+    <icon type="search" size="10"></icon>搜索
+  </view>
+</view>
+<view class="wrapper">
+  <view class="movies-item" wx:for="{{movies}}" wx:key="index">
+    <view class="movies-top">
+      <view class="title">{{item.title}}</view>
+      <view class="more">
+        更多 <text class="iconfont iconxiangyoujiantou"></text>
+      </view>
+    </view>
+    <scroll-view scroll-x="true">
+      <view class="bottom" wx:for="{{item.list}}" wx:for-item="list" wx:for-key="idx" wx:key="idx" data-id="{{list.m_id}}" bindtap="toDetails">
+        <image src="{{list.img}}"></image>
+        <view class="movies-name">{{list.title}}</view>
+        <view class="rating">
+          <template is="stars" data="{{ list }}"/>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
